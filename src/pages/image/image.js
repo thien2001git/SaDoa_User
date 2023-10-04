@@ -157,7 +157,7 @@ const ImagesPage = () => {
                                 options={Page_Option}
                                 value={page}
                                 onChange={(select) => {
-                                    setPage(select);
+                                    if (select.value !== page.value) setPage(select);
                                 }}
                             />
                         </div>
@@ -169,7 +169,7 @@ const ImagesPage = () => {
                             options={Page_Option}
                             value={page}
                             onChange={(select) => {
-                                setPage(select);
+                                if (select.value !== page.value) setPage(select);
                             }}
                         />
                     </div>

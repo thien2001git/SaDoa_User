@@ -6,7 +6,7 @@ import worksApis from '../../api/baseAdmin/works';
 import '../../assets/css/_images.css';
 import ImageLink from '../../components/_common/images/imageLink';
 import Loading from '../../components/loading';
-import { MySwal, scrollToTop } from '../../helpers/common';
+import { MySwal, scrollToTop, setTitle } from '../../helpers/common';
 function srcset(image, size, rows = 1, cols = 1) {
     return {
         src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -18,6 +18,7 @@ const ImageDetails = () => {
     const [images, setImages] = useState(null);
     const [image, setImage] = useState(null);
     const [isLoadMore, setIsLoadMore] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const isLoadingMore = useRef(false);
     const [isLoadFirst, setIsLoadFirst] = useState(true);
     const [zoom, setZoom] = useState(7);
@@ -56,9 +57,12 @@ const ImageDetails = () => {
     useEffect(() => {
         scrollToTop();
         async function fetchData() {
+            setIsLoading(true);
             const res = await worksApis.getById(id);
             if (res.success) {
                 setImage(res.data);
+                setTitle(res.data.title);
+                setIsLoading(false);
             } else if (res.status === 404)
                 MySwal.fire({
                     title: '404 not found',
@@ -85,7 +89,7 @@ const ImageDetails = () => {
         }
         if (id) loadRecommended();
     }, [id]);
-    if (!image)
+    if (!image || isLoading)
         return (
             <section className="image-details">
                 <div style={{ paddingTop: '100px' }}>

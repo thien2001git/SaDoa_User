@@ -265,7 +265,7 @@ section.image-details .bottom .bottom__recommended-videos .item {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 350px) {
     section.image-details .bottom .bottom__recommended-videos .item {
         width: 100%;
         margin-right: 0;

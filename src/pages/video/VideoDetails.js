@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import worksApis from '../../api/baseAdmin/works';
 import VideoLink from '../../components/_common/video/videoLink';
 import Loading from '../../components/loading';
-import { MySwal, scrollToTop } from '../../helpers/common';
+import { MySwal, scrollToTop, setTitle } from '../../helpers/common';
 const VideoPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
@@ -46,6 +46,7 @@ const VideoPage = () => {
             if (res.success) {
                 setIsLoading(false);
                 setVideo(res.data);
+                setTitle(res.data.title);
             } else if (res.status === 404)
                 MySwal.fire({
                     title: '404 not found',
@@ -68,7 +69,6 @@ const VideoPage = () => {
         async function loadRecommended() {
             const res = await worksApis.getByRecommended(id);
             if (res.success) setVideos(res.data);
-            console.log(res);
         }
         fetchData();
         if (id) loadRecommended();

@@ -688,3 +688,8 @@ section.video-detail .bottom .bottom__recommended-videos .item {
 .small-dropdown::-webkit-scrollbar {
     width: 3px;
 }
+section .item {
+    border-radius: 5px !important;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
