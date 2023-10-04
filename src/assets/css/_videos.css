@@ -1,0 +1,117 @@
+section.videos > .title {
+    font-size: 40px;
+    text-align: center;
+    margin: 50px 0 0 30px;
+}
+.videos .filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-bottom: 30px;
+}
+@media (max-width: 940px) {
+    .videos .filter {
+        padding: 0 30px;
+    }
+}
+@media (max-width: 640px) {
+    .videos .filter {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 550px) {
+    .videos .filter {
+        margin-top: 15px;
+        padding: 0 10px;
+    }
+    .videos .filter .start {
+        margin-right: 5px;
+    }
+    .videos .filter .end {
+        margin-left: 5px;
+    }
+}
+.videos .filter .start,
+.videos .filter .end {
+    flex: 1;
+    max-width: 200px;
+    position: relative;
+}
+section .videos-list {
+    padding: 0 50px;
+    padding-bottom: 50px;
+}
+@media (max-width: 940px) {
+    .videos .videos-list {
+        padding: 0 30px;
+        padding-bottom: 50px;
+    }
+}
+@media (max-width: 640px) {
+    .videos .videos-list {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 550px) {
+    .videos .videos-list {
+        margin-top: 15px;
+        padding: 0 10px;
+    }
+}
+section .videos-list .videos-list__row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+section .videos-list .videos-list__row .item {
+    width: 24%;
+    margin-right: 1%;
+    margin-top: 15px;
+}
+@media (min-width: 940px) {
+    section .videos-list .videos-list__row .item:nth-child(4n + 0) {
+        width: 25%;
+        margin-right: 0;
+    }
+}
+@media (max-width: 940px) {
+    section .videos-list .videos-list__row .item {
+        width: 32.33%;
+        margin-right: 1%;
+    }
+    section .videos-list .videos-list__row .item:nth-child(3n + 0) {
+        width: 33.33%;
+        margin-right: 0;
+    }
+}
+@media (max-width: 650px) {
+    section .videos-list .videos-list__row .item {
+        width: 49%;
+        margin-right: 1%;
+    }
+    section .videos-list .videos-list__row .item:nth-child(3n + 0) {
+        width: 49%;
+        margin-right: 1%;
+    }
+    section .videos-list .videos-list__row .item:nth-child(even) {
+        width: 49%;
+        margin-right: 0;
+        margin-left: 1%;
+    }
+}
+
+@media (max-width: 350px) {
+    section .videos-list .videos-list__row .item {
+        width: 100%;
+        margin-right: 0;
+    }
+    section .videos-list .videos-list__row .item:nth-child(1n + 0) {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    section .videos-list .videos-list__row .item:nth-child(even) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

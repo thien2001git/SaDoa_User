@@ -1,0 +1,39 @@
+body.dark-theme {
+    background-color: rgb(49, 49, 49);
+}
+.dark-theme .site-header svg,
+.dark-theme .site-header form span,
+.dark-theme .search-form__input {
+    color: white !important;
+}
+
+.dark-theme .search-form__input {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.dark-theme .header-content,
+.dark-theme .header-navigation .navigation__container {
+    background-color: rgb(49, 49, 49);
+}
+.dark-theme .header-content {
+    background-position: center -3px;
+}
+.dark-theme .mobile-site-nav__link {
+    color: white;
+}
+.dark-theme .header-navigation {
+    background-color: rgb(80, 80, 80);
+}
+.dark-theme .site-nav--center,
+.dark-theme .site-nav__dropdown {
+    background-color: rgb(80, 80, 80);
+}
+.dark-theme .title,
+.dark-theme .latest-works,
+.dark-theme .latest-works .link a,
+.dark-theme .recommended-videos,
+.dark-theme .recommended-videos .link a,
+.dark-theme .video-detail .header,
+.dark-theme .site-nav__dropdown .site-nav__dropdown-link,
+.dark-theme .site-nav > .site-nav__item > .site-nav__link {
+    color: white;
+}
