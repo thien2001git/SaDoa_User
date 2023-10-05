@@ -39,7 +39,6 @@ const VideoPage = () => {
         };
     }, [id, videos]);
     useEffect(() => {
-        scrollToTop();
         async function fetchData() {
             if (!isLoading) setIsLoading(true);
             const res = await worksApis.getById(id);
@@ -79,6 +78,7 @@ const VideoPage = () => {
             if (res.success) setAlbums(res.data);
         }
         video?.albums && fetchData();
+        scrollToTop(document.getElementById('shopify-section-header')?.clientHeight);
     }, [video]);
     return (
         <>

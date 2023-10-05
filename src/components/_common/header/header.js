@@ -23,7 +23,10 @@ const Header = () => {
     const handleFormSearch = (e) => {
         e.preventDefault();
         const q = e.target.childNodes[3].value;
-        q && navigate('/works?q=' + q);
+        if (q) {
+            navigate('/search?q=' + q);
+            setIsSearchOpened(false);
+        }
     };
     useEffect(() => {
         openNav(false);

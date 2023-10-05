@@ -30,6 +30,7 @@ export default function Layout() {
                         label: cat.title,
                     })
                 );
+                a.sort((a, b) => a.value.localeCompare(b.value));
                 dispatch(setInitialValue(a));
             }
         }

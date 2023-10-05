@@ -3,10 +3,10 @@ import withReactContent from 'sweetalert2-react-content';
 
 export const MySwal = withReactContent(Swal);
 
-export function scrollToTop() {
+export function scrollToTop(top) {
     window.scrollTo({
         left: 0,
-        top: 0,
+        top: top ?? 0,
         behavior: 'smooth',
     });
 }

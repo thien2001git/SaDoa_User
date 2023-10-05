@@ -32,9 +32,16 @@ const ImageLink = ({ image }) => {
                         }}
                     ></div>
                 </div>
-                <Link to={'/images/' + image._id} className="title">
-                    {image.title}
-                </Link>
+                {image.type === 0 && (
+                    <Link to={'/images/' + image._id} className="title">
+                        {image.title}
+                    </Link>
+                )}
+                {image.type === 1 && (
+                    <Link to={'/videos/' + image._id} className="title">
+                        {image.title}
+                    </Link>
+                )}
             </div>
         </>
     );

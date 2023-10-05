@@ -68,7 +68,7 @@ const VideosPage = () => {
     }, [Page_Option, isLoading, sort.value, videos]);
     useEffect(() => {
         setTitle('Videos');
-        scrollToTop();
+        scrollToTop(document.getElementById('shopify-section-header')?.clientHeight);
         const p = parseInt(searchParams.get('page')) || 1;
         const s = parseInt(searchParams.get('sort')) || 0;
         setPage({ label: 'Page ' + p, value: p });

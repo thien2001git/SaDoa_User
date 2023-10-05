@@ -49,7 +49,6 @@ const ImageDetails = () => {
         };
     }, [id, images]);
     useEffect(() => {
-        scrollToTop();
         async function fetchData() {
             setIsLoading(true);
             const res = await worksApis.getById(id);
@@ -83,6 +82,9 @@ const ImageDetails = () => {
         }
         if (id) loadRecommended();
     }, [id]);
+    useEffect(() => {
+        scrollToTop(document.getElementById('shopify-section-header')?.clientHeight);
+    }, [image]);
     if (!image || isLoading)
         return (
             <section className="image-details">

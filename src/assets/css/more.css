@@ -695,3 +695,15 @@ section .item {
     overflow: hidden;
     margin-bottom: 25px;
 }
+
+.search-empty {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 10px;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.search-empty a {
+    font-size: 18px;
+}
