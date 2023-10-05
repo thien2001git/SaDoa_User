@@ -441,6 +441,8 @@ main .accent-background + .shopify-section {
 .works_list .works_list__item {
     width: calc(25% - 10px);
     margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 @media (max-width: 940px) {
     .works_list .works_list__item {
@@ -469,7 +471,7 @@ main .accent-background + .shopify-section {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 350px) {
     .works_list .works_list__item {
         width: calc(100% - 10px);
     }
@@ -477,7 +479,7 @@ main .accent-background + .shopify-section {
 
 .image-link .title {
     display: inline-block;
-    color: #3085c3;
+    color: #333;
     text-decoration: none;
     font-size: 18px;
     padding: 10px 0;

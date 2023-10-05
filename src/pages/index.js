@@ -19,7 +19,7 @@ function Index() {
         function fetchData() {
             Promise.all([
                 worksApis.get({
-                    limit: 2,
+                    limit: 4,
                     type: 1,
                 }),
                 worksApis.get({
@@ -79,7 +79,7 @@ function Index() {
             <div className="latest-works">
                 <h1>Latest Images</h1>
                 <div className="link">
-                    <Link to={'videos'}>See all</Link>
+                    <Link to={'/images'}>See all</Link>
                 </div>
                 {works && (
                     <div className="works_list">
