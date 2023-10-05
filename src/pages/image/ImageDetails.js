@@ -7,12 +7,6 @@ import '../../assets/css/_images.css';
 import ImageLink from '../../components/_common/images/imageLink';
 import Loading from '../../components/loading';
 import { MySwal, scrollToTop, setTitle } from '../../helpers/common';
-function srcset(image, size, rows = 1, cols = 1) {
-    return {
-        src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-        srcSet: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format&dpr=2 2x`,
-    };
-}
 const ImageDetails = () => {
     const { id } = useParams();
     const [images, setImages] = useState(null);
