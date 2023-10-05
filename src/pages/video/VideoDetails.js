@@ -77,7 +77,8 @@ const VideoPage = () => {
             const res = await worksApis.getByAlbums(video.albums);
             if (res.success) setAlbums(res.data);
         }
-        video?.albums && fetchData();
+        if (video?.albums) fetchData();
+        else setAlbums(null);
         scrollToTop(document.getElementById('shopify-section-header')?.clientHeight);
     }, [video]);
     return (
