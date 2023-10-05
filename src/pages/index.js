@@ -21,10 +21,12 @@ function Index() {
                 worksApis.get({
                     limit: 4,
                     type: 1,
+                    sort: 1,
                 }),
                 worksApis.get({
                     limit: 20,
                     type: 0,
+                    sort: 1,
                 }),
             ]).then((data) => {
                 if (data[0].success) setVideos(data[0].data.docs);

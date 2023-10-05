@@ -101,6 +101,7 @@ section.video-detail .bottom .video-link .title {
     justify-content: space-evenly;
     width: 100%;
     margin: 15px 0;
+    flex-wrap: wrap;
 }
 .big-video .big-video__item {
     width: calc(50% - 40px);
