@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+    DATABASE="sadoa_admin"
+    ATLAS_URI="mongodb+srv://sa-doa:TrongSaDoa@sadoa.te9zwuf.mongodb.net/?retryWrites=true&w=majority&appName=SaDoa"
+
 ## Available Scripts
 
 In the project directory, you can run:
